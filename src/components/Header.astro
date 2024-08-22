@@ -160,6 +160,7 @@ const MENUITEMS = [
   }
 
   //Avoid page reload
+  document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('#portfolio-header nav a')
 
   navLinks.forEach((link) => {
@@ -190,6 +191,7 @@ const MENUITEMS = [
       }
     })
   })
+})
 
   //Item menu background animation
   const listItem = document.querySelectorAll('#portfolio-header nav a')
