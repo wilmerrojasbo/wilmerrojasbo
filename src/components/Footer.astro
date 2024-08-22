@@ -1,0 +1,42 @@
+---
+import { getI18N } from '../i18n'
+import {
+  getLangFromUrl,
+  useTranslations,
+} from '../i18n/utils'
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+const lang = getLangFromUrl(Astro.url)
+
+const t = useTranslations(lang)
+
+---
+
+<footer
+  class="opacity-80 m-4 mt-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center"
+>
+  <div
+    class="rounded-lg w-full max-w-screen-xl mx-auto flex items-center flex-col-reverse lg:flex-row lg:justify-between py-4"
+  >
+    <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
+      >
+      {i18n.FOOTER_TEXT_1}
+      <a href="https://www.linkedin.com/in/midudev" target="_blank" class="hover:underline text-cyan-500">Midudev</a>{i18n.FOOTER_TEXT_2} 
+      <a href="https://porfolio.dev/" target="_blank" class="hover:underline text-cyan-500">Porfolio.dev</a>.
+    </span>
+    <ul
+      class="flex flex-wrap items-center mt-3 mb-4 lg:mb-0 text-sm font-medium dark:text-white/90 sm:mt-0"
+    >
+    <li>
+      <a href='https://www.linkedin.com/in/wilmerrojasbo' target="_blank" class="hover:underline me-4 md:me-6">LinkedIn</a>
+    </li>
+      <li>
+      <a id="contacto" href="mailto:wilmerrojasbo@gmail.com" class="hover:underline"
+          >{t('nav.contact')}</a
+        >
+      </li>
+    </ul>
+  </div>
+</footer>

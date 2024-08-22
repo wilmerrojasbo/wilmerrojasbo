@@ -1,0 +1,37 @@
+{
+  Astro.props.animated ? (
+    <div class=' flex'>
+      <span class='relative inline-block overflow-hidden rounded-full p-[1px]'>
+        <span>
+          <span class='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#51E4B8_0%,#21554E_50%,#51E4B8_100%)]' />
+          <a
+            {...Astro.props}
+            class='inline-flex h-full w-full gap-2 text-base lg:text-xl justify-center items-center rounded-full bg-gray-900 px-4 py-1  leading-5 text-white backdrop-blur-xl dark:bg-gray-800 dark:text-slate-200'
+          >
+            <slot />
+          </a>
+        </span>
+      </span>
+    </div>
+  ) : (
+    <a
+      class={`
+  inline-flex 
+  items-center 
+  justify-center gap-2 px-4 py-1 transition 
+  border-2 rounded-full 
+  dark:bg-gray-800 dark:border-gray-600 
+  dark:text-white focus-visible:ring-yellow-500/80 
+  text-base lg:text-xl bg-gray-900 border-gray-700 
+  group max-w-fit text-white focus:outline-none 
+  focus-visible:outline-none focus-visible:ring 
+  focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black
+  `}
+      {...Astro.props}
+      target='_blank'
+      rel='noopener noreferrer'
+    >
+      <slot />
+    </a>
+  )
+}

@@ -1,0 +1,97 @@
+---
+import AboutMe from '../components/AboutMe.astro'
+import Experience from '../components/Experience.astro'
+import BriefCase from '../components/icons/BriefCase.astro'
+import ComputerCode from '../components/icons/ComputerCode.astro'
+import CodeBrackets from '../components/icons/CodeBrackets.astro'
+import EmailIcon from '../components/icons/EmailIcon.astro'
+import Linkedin from '../components/icons/Linkedin.astro'
+import Projects from '../components/Projects.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+import Skills from '../components/Skills.astro'
+import SocialBadges from '../components/SocialBadges.astro'
+import Layout from '../layouts/Layout.astro'
+import User from '../components/icons/User.astro'
+import { getI18N } from '../i18n'
+import { getLangFromUrl, useTranslatedId } from '../i18n/utils'
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+const lang = getLangFromUrl(Astro.url)
+
+const translateId = useTranslatedId(lang)
+---
+
+<Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
+  <main class='px-5'>
+    <SectionContainer
+      class='pb-44 pt-52 flex flex-col justify-center items-center z-10'
+    >
+      <h2 class='text-gray-800 dark:text-white text-base lg:text-4xl font-bold'>
+        {i18n.HOME_INTRO}
+      </h2>
+      <h1
+        class='text-4xl lg:text-7xl pb-3 lg:pb-8 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text font-bold'
+      >
+        {i18n.HOME_INTRO_NAME}
+      </h1>
+      <h2 class='text-base lg:text-3xl text-wrap max-w-[700px] text-center'>
+        {i18n.HOME_INTRO_EXPERIENCE}
+        <span class='text-sky-800 dark:text-sky-200'
+          >{i18n.HOME_INTRO_ROLE}</span
+        >
+        {i18n.HOME_INTRO_LOCATION}
+        <span class='text-green-800 dark:text-green-200'
+          >{i18n.HOME_INTRO_SPECIALIZATION}</span
+        >
+      </h2>
+
+      <nav class='flex flex-wrap gap-4 mt-8'>
+        <SocialBadges href='https://www.linkedin.com/in/wilmerrojasbo'
+          ><Linkedin class='size-5' />LinkedIn</SocialBadges
+        >
+        <SocialBadges animated href='mailto:wilmerrojasbo@gmail.com'
+          ><EmailIcon class='size-5' />{i18n.CONTACT_ME_LABEL}</SocialBadges
+        >
+      </nav>
+    </SectionContainer>
+    <SectionContainer id={translateId('experience')} class='pt-10 lg:pt-20'>
+      <h2
+        class='text-xl lg:text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80'
+      >
+        <BriefCase class='size-7' />
+        {i18n.WORK_EXPERIENCE_TITLE}
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer>
+      <h2
+        class='text-xl lg:text-3xl font-semibold flex gap-x-3 items-center text-black/80 dark:text-white/80'
+      >
+        <CodeBrackets class='size-7' />
+        {i18n.SKILLS_TECHNOLOGIES_TITLE}
+      </h2>
+      <Skills />
+    </SectionContainer>
+    <SectionContainer id={translateId('projects')} class='pt-10 lg:pt-20'>
+      <h2
+        class='text-xl lg:text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80'
+      >
+        <ComputerCode class='size-7' />
+        {i18n.PROJECTS_TITLE}
+      </h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id={translateId('about')} class='pt-10 lg:pt-20'>
+      <h2
+        class='text-xl lg:text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80'
+      >
+        <User class='size-7' />
+        {i18n.ABOUT_ME_TITLE}
+      </h2>
+
+      <AboutMe />
+    </SectionContainer>
+  </main>
+</Layout>

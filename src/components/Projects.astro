@@ -1,0 +1,97 @@
+---
+import ProjectItem from './ProjectItem.astro'
+import { getI18N } from '../i18n'
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+const PROJECTS = [
+  {
+    title: i18n.PROJECT_TITLE_1,
+    description: i18n.PROJECT_DESCRIP_1,
+    link: 'https://popeye.pollstardev.com/',
+    image: '/img/projects/restaurant.webp',
+    tags: ['HTML', 'Tailwind CSS', 'JavaScript', 'CodeIgniter', 'PHP', 'MySQL'],
+    date: i18n.EXPERIENCE_DATE_1
+  },
+  {
+    title: i18n.PROJECT_TITLE_2,
+    description: i18n.PROJECT_DESCRIP_2,
+    image: '/img/projects/plicspanish.webp',
+    tags: [
+      'HTML',
+      'CSS',
+      'Bootstrap',
+      'JavaScript',
+      'CodeIgniter',
+      'PHP',
+      'MySQL'
+    ],
+    date: i18n.EXPERIENCE_DATE_2
+  },
+  {
+    title: i18n.PROJECT_TITLE_3,
+    description: i18n.PROJECT_DESCRIP_3,
+    image: '/img/projects/internista.webp',
+    tags: [
+      'HTML',
+      'CSS',
+      'Bootstrap',
+      'JavaScript',
+      'Firebase Realtime Database',
+      'Firebase Authentication',
+      'Android Java'
+    ],
+    date: i18n.EXPERIENCE_DATE_3
+  },
+  {
+    title: i18n.PROJECT_TITLE_4,
+    description: i18n.PROJECT_DESCRIP_4,
+    image: '/img/projects/mgblegal.webp',
+    tags: [
+      'HTML',
+      'CSS',
+      'Bootstrap',
+      'JavaScript',
+      'PHP',
+      'WordPress',
+      'MySQL'
+    ],
+    date: i18n.EXPERIENCE_DATE_4,
+    link: 'http://mgblegal.com/'
+  }
+]
+---
+
+<section>
+  <div class='space-y-12 w-full py-6'>
+    <div
+      style='opacity: 1; filter: blur(0px); transform: translateY(-6px) translateZ(0px);'
+    >
+      <div
+        class='flex flex-col items-center justify-center space-y-4 text-center'
+      >
+        <div class='space-y-2'>
+          <h2 class='text-xl lg:text-4xl font-bold tracking-tighter'>
+            {i18n.PROJECT_SECTION_TITLE}
+          </h2><p class='text-sm lg:text-xl/relaxed max-w-[600px]'>
+            {i18n.PROJECT_SECTION_SUBTITLE}
+          </p>
+        </div>
+      </div>
+    </div><div class='grid grid-cols-1 gap-3 sm:grid-cols-2 mx-auto'>
+      {
+        PROJECTS.map(({ image, title, description, tags, date, link }) => (
+          <ProjectItem
+            image={image}
+            title={title}
+            description={description}
+            tags={tags}
+            date={date}
+            link={link}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

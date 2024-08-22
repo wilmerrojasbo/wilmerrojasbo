@@ -1,0 +1,40 @@
+---
+const skills = [
+  'HTML',
+  'CSS',
+  'Tailwind CSS',
+  'Bootstrap',
+  'JavaScript',
+  'PHP',
+  'CodeIgniter 4',
+  'WordPress',
+  'React',
+  'Astro',
+  'Next.js',
+  'MySQL',
+  'Firebase',
+  'Photoshop',
+  'Canva',
+  'Figma',
+  'Asana'
+]
+---
+
+<section id='tecnilogies'>
+  <div class='flex min-h-0 flex-col gap-y-3'>
+    <div
+      style='opacity: 1; filter: blur(0px); transform: translateY(-6px) translateZ(0px);'
+    >
+    </div><div class='flex flex-wrap gap-1'>
+      {
+        skills.map((skill) => (
+          <div style='opacity: 1; filter: blur(0px); transform: translateY(-6px) translateZ(0px);'>
+            <div class='inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-light dark:font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent dark:bg-zinc-50 dark:text-gray-800 bg-gray-900/80 text-zinc-50 shadow'>
+              {skill}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

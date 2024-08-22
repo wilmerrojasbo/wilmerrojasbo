@@ -1,0 +1,81 @@
+{
+    "SEO_TITLE": "Wilmer Rojas - Desarrollador Frontend y Móvil Experimentado | Especialista en React Native",
+    "SEO_DESCRIPTION": "Desarrollador Frontend con más de 4 años de experiencia en aplicaciones web y móviles usando React Native, HTML, CSS, JavaScript y PHP. Mejora la experiencia del usuario.",
+    "HOME_INTRO": "Hola, soy",
+    "HOME_INTRO_NAME": "Wilmer Rojas",
+    "HOME_INTRO_EXPERIENCE": "Más de 4 años de experiencia.",
+    "HOME_INTRO_ROLE": "Desarrollador FrontEnd",
+    "HOME_INTRO_LOCATION": "ubicado en Italia.",
+    "HOME_INTRO_SPECIALIZATION": "Con experiencia en la creación de aplicaciones web y móviles distintivas.",
+    "CONTACT_ME_LABEL": "Contáctame",
+    "WORK_EXPERIENCE_TITLE": "Experiencia Laboral",
+    "DETAILS_LABEL": "Detalles",
+    "RESPONSABILITIES_LABEL": "RESPONSABILIDADES",
+    "KEY_ACCOMP_LABEL": "LOGROS CLAVE",
+    "EXPERIENCE_DATE_1": "Enero - Septiembre 2023",
+    "EXPERIENCE_TITLE_1": "Desarrollador FrontEnd - Sopas y Asados Popeye",
+    "EXPERIENCE_DESCRIP_1": "Desarrollé una aplicación web para que los clientes del restaurante puedan ver el menú y hacer pedidos, y un panel de control para la gestión de ventas. Mejoré la eficiencia de los pedidos y el servicio al cliente.",
+    "EXPERIENCE_RESP_1": [
+        "Diseñar y desarrollar una aplicación web en la que los clientes del restaurante puedan ver el menú y realizar su pedido.",
+        "Diseñar y desarrollar un panel de control en el que el restaurante pueda monitorear las ventas, ver los pedidos y gestionar los platos.",
+        "Lanzar la aplicación web en producción y asegurar su correcto funcionamiento mediante la realización de pruebas.",
+        "Capacitar al personal del restaurante en el uso de la aplicación web."
+    ],
+    "EXPERIENCE_ACCOMP_1": [
+        "Mejora en la recepción y gestión de pedidos y ventas del restaurante.",
+        "Hacer más eficiente y ordenado el proceso de pedidos.",
+        "Proporcionar un mejor servicio a los clientes con una plataforma amigable y fácil de usar."
+    ],
+    "EXPERIENCE_DATE_2": "Enero - Mayo 2022",
+    "EXPERIENCE_TITLE_2": "Desarrollador FrontEnd - Plic Spanish",
+    "EXPERIENCE_DESCRIP_2": "Desarrollé una plataforma web para que los estudiantes de Plic Spanish accedan a recursos y se comuniquen con los profesores. Reduje el tiempo de registro de 1 hora a 15 minutos.",
+    "EXPERIENCE_RESP_2": [
+        "Diseñar y desarrollar una plataforma web donde los estudiantes de Plic Spanish puedan acceder a los recursos para sus clases y comunicarse con su profesor.",
+        "Capacitar a los profesores y administradores en el uso de la plataforma.",
+        "Lanzar la plataforma en producción y asegurar su correcto funcionamiento mediante la realización de pruebas."
+    ],
+    "EXPERIENCE_ACCOMP_2": [
+        "Mejora del proceso de registro reduciendo el tiempo de 1 hora a 15 minutos, creando una asignación automatizada de profesor a estudiante según el horario elegido por el estudiante y la disponibilidad del profesor."
+    ],
+    "EXPERIENCE_DATE_3": "Septiembre 2019 - Junio 2021",
+    "EXPERIENCE_TITLE_3": "Desarrollador FrontEnd - Internista a Domicilio",
+    "EXPERIENCE_DESCRIP_3": "Desarrollé un panel de control para que los médicos monitoreen a los pacientes de forma remota y una aplicación Android para el seguimiento de la salud de los pacientes, expandiendo la accesibilidad.",
+    "EXPERIENCE_RESP_3": [
+        "Desarrollar un panel de control que permita a los médicos de Internista a Domicilio consultar datos de glucosa y presión arterial, mantener un registro clínico de sus pacientes y recibir notificaciones por correo electrónico cuando un paciente registre datos elevados.",
+        "Construir una aplicación Android que permita a los pacientes de Internista a Domicilio hacer un seguimiento de su presión arterial y glucosa.",
+        "Publicar la aplicación finalizada en la Google Play Store y actualizarla para mejoras de rendimiento."
+    ],
+    "EXPERIENCE_ACCOMP_3": [
+        "Permitir a los médicos de Internista a Domicilio llegar, monitorear y conectarse con sus pacientes de forma remota en tiempos de pandemia.",
+        "Alcanzar a pacientes en otras ciudades gracias a la accesibilidad que proporciona la aplicación Android."
+    ],
+    "EXPERIENCE_DATE_4": "Septiembre 2018 - Septiembre 2019",
+    "EXPERIENCE_TITLE_4": "Desarrollador WordPress - MGB Legal",
+    "EXPERIENCE_DESCRIP_4": "Rediseñé el sitio web del bufete de abogados para darle un aspecto corporativo. Desarrollé una aplicación de gestión de correos electrónicos para el control de la comunicación.",
+    "EXPERIENCE_RESP_4": [
+        "Rediseñar el sitio web del bufete de abogados para darle una apariencia más corporativa.",
+        "Diseño y desarrollo de una aplicación que cumpla la función de enviar y recibir correos electrónicos de la empresa, consultar, responder o eliminar comentarios en su página web."
+    ],
+    "EXPERIENCE_ACCOMP_4": [
+        "Obtener un aspecto renovado para los clientes que el bufete de abogados desea alcanzar.",
+        "Tener un mejor control de sus correos electrónicos y publicaciones en el sitio web a través de la aplicación Android."
+    ],
+    "SKILLS_TECHNOLOGIES_TITLE": "Habilidades y Tecnologías",
+    "PROJECTS_TITLE": "Proyectos",
+    "PROJECT_SECTION_TITLE": "Explora Mis Proyectos Recientes",
+    "PROJECT_SECTION_SUBTITLE": "He enfrentado una variedad de desafíos, desde sitios web simples hasta aplicaciones web complejas. Aquí están algunos de los aspectos destacados.",
+    "PROJECT_TITLE_1": "Aplicación Web para Restaurantes: Optimización de Pedidos y Gestión de Ventas",
+    "PROJECT_DESCRIP_1": "Desarrollé una aplicación web para que los clientes de restaurantes puedan ver el menú y hacer pedidos, y un panel de control para la gestión de ventas. Mejoré la eficiencia en los pedidos y el servicio al cliente.",
+    "PROJECT_TITLE_2": "Portal para Estudiantes: Optimización del Acceso y la Comunicación para Plic Spanish",
+    "PROJECT_DESCRIP_2": "Desarrollé una plataforma web para que los estudiantes de Plic Spanish accedan a recursos y se comuniquen con sus profesores. Reduje el tiempo de registro de 1 hora a 15 minutos.",
+    "PROJECT_TITLE_3": "Panel para Médicos y Aplicación para Pacientes: Mejora de la Monitorización de la Salud a Distancia",
+    "PROJECT_DESCRIP_3": "Desarrollé un panel para médicos para la monitorización remota de pacientes y una aplicación Android para el seguimiento de la salud de los pacientes, ampliando la accesibilidad.",
+    "PROJECT_TITLE_4": "Rediseño de Sitio Web para Firma de Abogados y Aplicación de Gestión de Correos Electrónicos",
+    "PROJECT_DESCRIP_4": "Rediseñé el sitio web de una firma de abogados para darle un aspecto corporativo. Desarrollé una aplicación de gestión de correos electrónicos para el control de comunicaciones.",
+    "ABOUT_ME_TITLE": "Sobre mí",
+    "ABOUT_ME_TEXT_1": "Soy un <strong>Desarrollador Frontend</strong> con más de 4 años de experiencia en desarrollo web y formación en <strong>Ingeniería Informática</strong>.",
+    "ABOUT_ME_TEXT_2": "Mi trayectoria comenzó con la <strong>creación de sitios web para pequeñas empresas</strong>, y desde entonces he avanzado hacia la construcción de aplicaciones web completas, incluyendo <strong>liderar el diseño y desarrollo</strong> de una plataforma estudiantil en Plic Spanish. En proyectos de salud y bienestar como Internista a Domicilio, desarrollé aplicaciones web y móviles para conectar a médicos y pacientes de manera remota, y recientemente, creé una aplicación web para un restaurante para digitalizar su menú y optimizar el procesamiento de pedidos usando <strong>CodeIgniter 4, Tailwind CSS, MySQL y PHP</strong>.",
+    "ABOUT_ME_TEXT_3": "<strong>Con dominio en React, Astro y Next.js</strong>, me mantengo actualizado con las últimas tecnologías de desarrollo web. Mi experiencia en HTML, CSS, JavaScript y Bootstrap, combinada con un enfoque creativo para la resolución de problemas, me convierte en un valioso activo para cualquier equipo de desarrollo. Mi dedicación a la tecnología y rápida adaptabilidad aseguran que entregue soluciones digitales eficientes e impactantes.",
+    "FOOTER_TEXT_1": "Diseño inspirado por",
+    "FOOTER_TEXT_2": " y su proyecto"
+}

@@ -1,0 +1,81 @@
+{
+    "SEO_TITLE": "Wilmer Rojas - Experienced Frontend & Mobile Developer | React Native Specialist",
+    "SEO_DESCRIPTION": "Frontend Developer with 4+ years’ experience in web and mobile apps using React Native, HTML, CSS, JavaScript, and PHP. Enhancing user experiences.",
+    "HOME_INTRO": "Hi, I'm",
+    "HOME_INTRO_NAME": "Wilmer Rojas",
+    "HOME_INTRO_EXPERIENCE": "4+ years of experience.",
+    "HOME_INTRO_ROLE": "FrontEnd Developer",
+    "HOME_INTRO_LOCATION": "based in Italy.",
+    "HOME_INTRO_SPECIALIZATION": "With expertise in crafting distinctive Web and Mobile applications.",
+    "CONTACT_ME_LABEL": "Contact me",
+    "WORK_EXPERIENCE_TITLE": "Work Experience",
+    "DETAILS_LABEL": "Details",
+    "RESPONSABILITIES_LABEL": "RESPONSIBILITIES",
+    "KEY_ACCOMP_LABEL": "KEY ACCOMPLISHMENTS",
+    "EXPERIENCE_DATE_1": "January - September 2023",
+    "EXPERIENCE_TITLE_1": "FrontEnd Web Developer - Sopas y Asados Popeye",
+    "EXPERIENCE_DESCRIP_1": "Developed restaurant web app for customer menu viewing/ordering and control panel for sales management. Improved order efficiency and customer service.",
+    "EXPERIENCE_RESP_1": [
+        "Design and develop web application in which restaurant customers can see the menu and place their order.",
+        "Design and develop a control panel in which the restaurant can monitor sales, view orders and manage dishes.",
+        "Launch the web application into production and ensure its proper functioning by performing tests.",
+        "Train restaurant staff to use the web application."
+    ],
+    "EXPERIENCE_ACCOMP_1": [
+        "Improvement in the reception and management of restaurant orders and sales",
+        "Make the ordering process more efficient and orderly.",
+        "Provide better service to customers with a friendly and easy-to-use platform."
+    ],
+    "EXPERIENCE_DATE_2": "January - May 2022",
+    "EXPERIENCE_TITLE_2": "FrontEnd Web Developer - Plic Spanish",
+    "EXPERIENCE_DESCRIP_2": "Developed web platform for Plic Spanish students to access resources and communicate with teachers. Reduced registration time from 1 hour to 15 minutes.",
+    "EXPERIENCE_RESP_2": [
+        "Design and develop a web platform where Plic Spanish students can access resources for their classes as well as communicate with their teacher.",
+        "Train teachers and administrators in the use of the platform.",
+        "Launch the platform into production and ensure its proper functioning by performing tests."
+    ],
+    "EXPERIENCE_ACCOMP_2": [
+        "Improved registration process by reducing the time from 1 hour to 15 minutes, creating an automated assignment of teacher to student based on the student's schedule of choice and the teacher's availability."
+    ],
+    "EXPERIENCE_DATE_3": "September 2019 - June 2021",
+    "EXPERIENCE_TITLE_3": "FrontEnd Web Developer - Internista a Domicilio",
+    "EXPERIENCE_DESCRIP_3": "Developed physician dashboard for remote patient monitoring and Android app for patient health tracking, expanding accessibility.",
+    "EXPERIENCE_RESP_3": [
+        "Develop a dashboard that allows Internista a Domicilio physicians to consult glucose and blood pressure data, keep a clinical record of their patients, and receive email notifications when a patient registers elevated data.",
+        "Build an Android application that allows patients of Internista a Domicilio to keep track of their blood pressure and glucose.",
+        "Publish the finished application on google play store and update for performance improvements."
+    ],
+    "EXPERIENCE_ACCOMP_3": [
+        "Enabling Internista a Domicilio physicians to reach, monitor, and connect with their patients remotely in times of pandemic.",
+        "Reach patients in other cities due to the accessibility that the Android application provides."
+    ],
+    "EXPERIENCE_DATE_4": "September 2018 - September 2019",
+    "EXPERIENCE_TITLE_4": "WordPress Developer - MGB Legal",
+    "EXPERIENCE_DESCRIP_4": "Redesigned law firm website for a corporate look. Developed an email management app for communication control.",
+    "EXPERIENCE_RESP_4": [
+        "Redesign the law firm's website to give it a more corporate look and feel.",
+        "Design and development of an application that fulfills the function of sending and receiving e-mails from the company, consulting, answering or deleting comments on its web page"
+    ],
+    "EXPERIENCE_ACCOMP_4": [
+        "Obtain a renewed look and feel to the clients that the law firm wishes to reach.",
+        "Have a better control of your emails and website publications through the android application."
+    ],
+    "SKILLS_TECHNOLOGIES_TITLE": "Skills & Technologies",
+    "PROJECTS_TITLE": "Projects",
+    "PROJECT_SECTION_TITLE": "Explore My Recent Projects",
+    "PROJECT_SECTION_SUBTITLE": "I've tackled a range of challenges, from straightforward websites to intricate web applications. Here are some of the highlights.",
+    "PROJECT_TITLE_1": "Restaurant Web App: Streamlining Orders and Sales Management",
+    "PROJECT_DESCRIP_1": "Developed restaurant web app for customer menu viewing/ordering and control panel for sales management. Improved order efficiency and customer service.",
+    "PROJECT_TITLE_2": "Student Portal: Optimizing Access and Communication for Plic Spanish",
+    "PROJECT_DESCRIP_2": "Developed web platform for Plic Spanish students to access resources and communicate with teachers. Reduced registration time from 1 hour to 15 minutes.",
+    "PROJECT_TITLE_3": "Physician Dashboard and Patient App: Enhancing Remote Health Monitoring",
+    "PROJECT_DESCRIP_3": "Developed physician dashboard for remote patient monitoring and Android app for patient health tracking, expanding accessibility.",
+    "PROJECT_TITLE_4": "Law Firm Website Redesign and Email Management App",
+    "PROJECT_DESCRIP_4": "Redesigned law firm website for a corporate look. Developed an email management app for communication control.",
+    "ABOUT_ME_TITLE": "About me",
+    "ABOUT_ME_TEXT_1": "I am an experienced <strong>Frontend Developer</strong> with over 4 years of experience in web development and a background in <strong>Computer Engineering</strong>.",
+    "ABOUT_ME_TEXT_2": "My journey began with <strong>creating websites for small businesses</strong>, and I've since advanced to building comprehensive web applications, including <strong>leading the design and development</strong> of a student platform at Plic Spanish. In health and wellness projects like Internista a Domicilio, I developed web and mobile apps to connect doctors and patients remotely, and recently, I created a web application for a restaurant to digitize their menu and streamline order processing using <strong>CodeIgniter 4, Tailwind CSS, MySQL and PHP</strong>.",
+    "ABOUT_ME_TEXT_3": "<strong>Proficient in React, Astro, and Next.js</strong>, I stay updated with the latest web development technologies. My expertise in HTML, CSS, JavaScript, and Bootstrap, combined with a creative problem-solving approach, makes me a valuable asset to any development team. My dedication to technology and quick adaptability ensure I deliver efficient and impactful digital solutions.",
+    "FOOTER_TEXT_1": "Design Inspired by",
+    "FOOTER_TEXT_2": " and his project"
+}

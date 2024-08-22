@@ -1,0 +1,106 @@
+---
+import HTMLiconn from './icons/HTMLiconn.astro'
+import CSSicon from './icons/CSSicon.astro'
+import JSicon from './icons/JSicon.astro'
+import PHPicon from './icons/PHPicon.astro'
+import TailwindIcon from './icons/TailwindIcon.astro'
+import MysqlIcon from './icons/MysqlIcon.astro'
+import CodeigniterIcon from './icons/CodeigniterIcon.astro'
+import WordpressIcon from './icons/WordpressIcon.astro'
+import AndroidIcon from './icons/AndroidIcon.astro'
+import ReactIcon from './icons/ReactIcon.astro'
+
+const icons = [
+  { id: 'html-icon', component: HTMLiconn },
+  { id: 'css-icon', component: CSSicon },
+  { id: 'js-icon', component: JSicon },
+  { id: 'php-icon', component: PHPicon },
+  { id: 'tailwind-icon', component: TailwindIcon },
+  { id: 'mysql-icon', component: MysqlIcon },
+  { id: 'ci-icon', component: CodeigniterIcon },
+  { id: 'wp-icon', component: WordpressIcon },
+  { id: 'android-icon', component: AndroidIcon },
+  { id: 'react-icon', component: ReactIcon }
+]
+---
+
+<div class='opacity-15 text-black dark:text-white'>
+  <div id='icon-container'></div>
+
+  <!-- Pre-render SVG icons hidden in the DOM -->
+  <div id='icons-template' class='hidden'>
+    {
+      icons.map((icon) => (
+        <div id={icon.id}>
+          <icon.component width='50px' height='50px' />
+        </div>
+      ))
+    }
+  </div>
+
+  <script type='module'>
+    document.addEventListener('DOMContentLoaded', () => {
+      const icons = [
+        { id: 'html-icon' },
+        { id: 'css-icon' },
+        { id: 'js-icon' },
+        { id: 'php-icon' },
+        { id: 'tailwind-icon' },
+        { id: 'mysql-icon' },
+        { id: 'ci-icon' },
+        { id: 'wp-icon' },
+        { id: 'android-icon' },
+        { id: 'react-icon' }
+      ]
+
+      let iconCount = 0
+      const maxIcons = 10 // Set the maximum number of icons allowed on the screen
+
+      function createIcon() {
+        if (iconCount >= maxIcons) return // Stop creating new icons if the max is reached
+
+        const randomIndex = Math.floor(Math.random() * icons.length)
+        const iconData = icons[randomIndex]
+
+        const templateIcon = document.getElementById(iconData.id)
+        if (!templateIcon) return
+
+        const iconWrapper = templateIcon.cloneNode(true)
+        iconWrapper.style.position = 'absolute'
+        iconWrapper.style.left = `${Math.random() * 90}vw`
+        iconWrapper.style.top = `${Math.random() * 90}vh`
+        //iconWrapper.style.opacity = '0'
+        iconWrapper.style.animation = `fadeInOut 5s ease-in-out`
+
+        const container = document.getElementById('icon-container')
+        if (container) {
+          container.appendChild(iconWrapper)
+          iconCount++
+        }
+
+        iconWrapper.addEventListener('animationend', () => {
+          iconWrapper.remove()
+          iconCount-- // Decrease the count when an icon is removed
+        })
+      }
+
+      setInterval(createIcon, 500) // Adjust the interval to control the frequency of icon creation
+    })
+  </script>
+</div>
+<style>
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>

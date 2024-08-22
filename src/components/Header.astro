@@ -1,0 +1,257 @@
+---
+import LanguageToggle from './LanguageToggle.astro'
+import ThemeToggle from './ThemeToggle.astro'
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+  useTranslatedId
+} from '../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
+
+const t = useTranslations(lang)
+const translatePath = useTranslatedPath(lang)
+const translateId = useTranslatedId(lang)
+
+const MENUITEMS = [
+  {
+    title: t('nav.experience'),
+    label: translateId('experience'),
+    url: translatePath('/experience')
+  },
+  {
+    title: t('nav.projects'),
+    label: translateId('projects'),
+    url: translatePath('/projects')
+  },
+  {
+    title: t('nav.about'),
+    label: translateId('about'),
+    url: translatePath('/about')
+  },
+  {
+    title: t('nav.contact'),
+    label: 'contact',
+    url: 'mailto:wilmerrojasbo@gmail.com'
+  }
+]
+---
+
+<header id='portfolio-header' class='fixed top-0 z-10 w-full mx-auto py-2'>
+  <nav
+    class='flex justify-between px-4 lg:p-0 lg:justify-center items-center text-gray-600 dark:text-gray-200 gap-x-4'
+  >
+    <!-- Hamburger Button -->
+    <button
+      id='hamburger'
+      aria-label='Menu'
+      aria-expanded='false'
+      class='text-gray-600 dark:text-gray-200 lg:hidden'
+    >
+      <!-- Hamburger Icon -->
+      <svg
+        class='w-6 h-6'
+        fill='none'
+        stroke='currentColor'
+        viewBox='0 0 24 24'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <path
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          stroke-width='2'
+          d='M4 6h16M4 12h16m-7 6h7'></path>
+      </svg>
+    </button>
+
+    <!-- Menu Items -->
+    <ul
+      id='menu'
+      class='hidden flex-col lg:flex lg:flex-row text-center w-full lg:w-auto lg:justify-center lg:items-center'
+    >
+      {
+        MENUITEMS.map((item) => (
+          <li>
+            <a
+              class='block px-2 py-2 transition hover:text-green-500 dark:hover:text-green-400'
+              aria-label={item.label}
+              href={item.url}
+            >
+              {item.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <!-- Theme and Language Toggles -->
+    <div class='flex items-center space-x-4'>
+      <ThemeToggle />
+      <LanguageToggle />
+    </div>
+  </nav>
+
+  <div
+    id='menu-backdrop'
+    class={`
+      absolute bg-gray-400/15 dark:bg-white/10 backdrop-blur-lg rounded-full
+      translate-x-[var(--left)] translate-y-[var(--top)]
+      left-0 top-0
+      w-[var(--width)] h-[var(--height)]
+      transition-all duration-500
+      ease-in-out opacity-0 -z-10
+    `}
+  >
+  </div>
+</header>
+
+<style>
+  header {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply text-black shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-sky-950/50 ring-white/10;
+    }
+  }
+
+  #menu {
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-open #menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (min-width: 768px) {
+    #menu {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  const hamburgerButton = document.getElementById(
+    'hamburger'
+  ) as HTMLButtonElement | null
+  const menu = document.getElementById('menu') as HTMLElement | null
+  const header = document.getElementById(
+    'portfolio-header'
+  ) as HTMLElement | null
+
+  if (hamburgerButton && menu && header) {
+    hamburgerButton.addEventListener('click', () => {
+      const isExpanded =
+        hamburgerButton.getAttribute('aria-expanded') === 'true'
+
+      hamburgerButton.setAttribute('aria-expanded', String(!isExpanded))
+      menu.classList.toggle('hidden')
+      header.classList.toggle('menu-open')
+    })
+  }
+
+  //Avoid page reload
+  const navLinks = document.querySelectorAll('#portfolio-header nav a')
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const href = link.getAttribute('href')
+
+      // Check if href is not null
+      if (href) {
+        const isAnchorLink = href.includes('#')
+
+        if (isAnchorLink) {
+          event.preventDefault()
+
+          const [path, hash] = href.split('#')
+          const targetId = hash
+          const targetElement = document.getElementById(targetId)
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            })
+
+            // Update the URL with the new hash without reloading the page
+            window.history.pushState({}, '', `${path}#${targetId}`)
+          }
+        }
+      }
+    })
+  })
+
+  //Item menu background animation
+  const listItem = document.querySelectorAll('#portfolio-header nav a')
+  const menuBackDrop = document.querySelector('#menu-backdrop') as HTMLElement
+
+  listItem.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+      const { left, width } = item.getBoundingClientRect()
+
+      menuBackDrop.style.setProperty('--left', `${left}px`)
+      menuBackDrop.style.setProperty('--top', '11px')
+      menuBackDrop.style.setProperty('--width', `${width}px`)
+      menuBackDrop.style.setProperty('--height', '30px')
+
+      menuBackDrop.style.opacity = '1'
+      menuBackDrop.style.visibility = 'visible'
+    })
+
+    item.addEventListener('mouseleave', () => {
+      menuBackDrop.style.opacity = '0'
+      menuBackDrop.style.visibility = 'hidden'
+    })
+  })
+
+  //Active menu item
+  document.addEventListener('astro:page-load', () => {
+    const sections = document.querySelectorAll('section')
+    const navItems = document.querySelectorAll('header nav a')
+
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute('aria-label') == entry.target.id) {
+              item.classList.add('text-green-500')
+            } else {
+              item.classList.remove('text-green-500')
+            }
+          })
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3
+    })
+
+    sections.forEach((section) => {
+      observer.observe(section)
+    })
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === 'hidden') {
+        observer.disconnect()
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section)
+        })
+      }
+    }
+  })
+</script>
